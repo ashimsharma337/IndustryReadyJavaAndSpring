@@ -30,6 +30,15 @@ public class LaunchDataType {
 		
 		// boolean types (either true or false)
 		// mostly use in conditional and relational operator
+		
+		// while creating variable numbers are not allowed it is allowed only after character
+		// int 12age; not allowed
+		// int 12;    not allowed 
+		// int n12;   allowed 
+		
+		// only two special character is allowed only "-" and "$" no other special character
+		// for integer literals only "-" is allowed but it has to be in between 
+		// int marks = 10_000; only is between
 
 	}
 
