@@ -37,8 +37,8 @@ public class LaunchDataType {
 		// int n12;   allowed 
 		
 		// only two special character is allowed only "-" and "$" no other special character
-		// for integer literals only "-" is allowed but it has to be in between 
-		// int marks = 10_000; only is between
+		// for integer literals only "-" is allowed but it has to be inbetween 
+		// int marks = 10_000; only inbetween not before or after can also be used after decimal inbetween
 
 	}
 
