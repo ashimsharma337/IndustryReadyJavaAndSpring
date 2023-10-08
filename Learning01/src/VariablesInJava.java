@@ -22,7 +22,7 @@ class Demo1 {
 	}
 	
 	void displayLocal(int a, int b) {
-		int result = a + b;          // Here a and b is local variable
+		int result = a + b;          // Here a and b are local variables
 		System.out.println("Result is : " + result);
 	}
 }
@@ -61,14 +61,16 @@ Instance Variable == Object variable == fields ==Properties
 ==> Instance variable are declared directly within a class.
 ==> Instance variable memory will be allocated on heap area within an Object/Instance.
 ==> JVM would allocate default values to instance variables.(0 for int, null for string e.t.c)
-==>Instance variable memory would be  deallocated after object becomes referenceless and GC collects the object
+==> Instance variable memory would be  deallocated after object becomes referenceless and GC collects the object
 ==> Instance variable can be accessed anywhere within a class its declared.
 
-==>Local variable declared within a method or block or loop.
-==>Default values are not initialized for local variable.
+==> Local variable declared within a method or block or loop.
+==> Default values are not initialized for local variable.
 ==> Local variables cannot be used without initialization.
-==>Memory will be allocated within stack area.
-==>After finishing method local variable will be destroyed.
-==>Local variable can-not be used outside the block.
- * 
+==> Memory will be allocated within stack area.
+==> After finishing method local variable will be destroyed.
+==> Local variable can-not be used outside the block.
+ *
+ * Stack area---reference variable, local variable, method
+ * Heap area----Object, instance variable, static 
  * */
