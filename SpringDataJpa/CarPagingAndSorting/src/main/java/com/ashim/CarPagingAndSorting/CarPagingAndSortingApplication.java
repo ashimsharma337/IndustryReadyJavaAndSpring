@@ -15,9 +15,13 @@ public class CarPagingAndSortingApplication {
 		CarManagementImpl service = context.getBean(CarManagementImpl.class);
 		
 		// Try false for descending
-		Iterable<CarDetails> carList = service.fetchDetails(true, "carName", "carCompany");
+		// Iterable<CarDetails> carList = service.fetchDetails(true, "carName", "carCompany");
+		// carList.forEach((c) -> System.out.println(c.getCarName()+"=>"+c.getCarCompany()));
+		// context.close();
+		
+		Iterable<CarDetails> carList = service.fetchCarDetailsByPgNo(0, 3, false, "carName", "carCompany");
 		carList.forEach((c) -> System.out.println(c.getCarName()+"=>"+c.getCarCompany()));
-		context.close();
+		
 	}
 
 }
