@@ -17,6 +17,7 @@ public class CarPagingAndSortingApplication {
 		// Try false for descending
 		Iterable<CarDetails> carList = service.fetchDetails(true, "carName", "carCompany");
 		carList.forEach((c) -> System.out.println(c.getCarName()+"=>"+c.getCarCompany()));
+		context.close();
 	}
 
 }

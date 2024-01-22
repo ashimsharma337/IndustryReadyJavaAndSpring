@@ -51,6 +51,7 @@ public class CarManagementApplication {
 		
 		List<CarDetails> carList = service.getAllCars();
 		carList.forEach((c) -> System.out.println("Name: "+c.getCarName()+"   "+"Price: "+c.getCarPrice()+"\n"));
+		context.close();
 	}	                                            
 
 }
