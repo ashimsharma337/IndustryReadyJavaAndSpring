@@ -11,6 +11,11 @@ public class Shapes {
 		
 		return 3.14*radius*radius;
 	}
+	
+    public double computeRectangleArea(double radius) {
+		
+		return 0;
+	}
 
 }
 
