@@ -1,5 +1,6 @@
 package com.ashim;
 
+import static org.junit.Assume.assumeTrue;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterAll;
@@ -10,6 +11,11 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.condition.EnabledForJreRange;
+import org.junit.jupiter.api.condition.EnabledOnJre;
+import org.junit.jupiter.api.condition.EnabledOnOs;
+import org.junit.jupiter.api.condition.JRE;
+import org.junit.jupiter.api.condition.OS;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class TestBeforeAfter {
@@ -37,10 +43,14 @@ class TestBeforeAfter {
 	    }
 		
 		@Test
+		//@EnabledOnOs(OS.MAC)
+		//@EnabledOnJre(JRE.JAVA_11)
+		//@EnabledForJreRange(min=JRE.JAVA_8, max=JRE.JAVA_11)
 		void testcomputeSquareArea() {
 			
+			assumeTrue(true);
 			assertEquals(576, shape.computeSquareArea(24));
-			System.out.println("Actual test running");
+			System.out.println("Actual test running testComputeSquareAreas");
 		}
 		
 		@Test
