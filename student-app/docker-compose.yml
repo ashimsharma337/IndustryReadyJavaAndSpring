@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  app:
+    build: .
+    ports: 
+      - "8090:8090"
+    networks:
+      - student-network
+   
+  postgres: 
+    image: postgres:latest
+    environment: 
+      POSTGRES_USER: ashim
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: ashimdb
+    ports: 
+      - "5433:5432"
+    networks: 
+      - student-network
+    volumes:
+      - postgres-student-data:/var/lib/postgresql/data
+networks: 
+  student-network:
+    driver: bridge
+volumes:
+  postgres-student-data:
